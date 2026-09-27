@@ -15,8 +15,14 @@ test('Build Output: dist directory contains production assets', () => {
   const distHtmlPath = path.join(distPath, 'index.html');
   assert.ok(fs.existsSync(distHtmlPath), 'dist/index.html must exist');
 
+  const distPanfletoPath = path.join(distPath, 'panfleto.html');
+  assert.ok(fs.existsSync(distPanfletoPath), 'dist/panfleto.html must exist');
+
   const htmlContent = fs.readFileSync(distHtmlPath, 'utf8');
   assert.ok(htmlContent.includes('Tupi em Consciência'), 'dist/index.html must contain project title');
+
+  const panfletoContent = fs.readFileSync(distPanfletoPath, 'utf8');
+  assert.ok(panfletoContent.includes('Tupi em Consciência'), 'dist/panfleto.html must contain project title');
 
   // Verify assets directory
   const assetsDir = path.join(distPath, 'assets');
