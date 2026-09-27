@@ -1,6 +1,8 @@
 import './style.css';
 import Alpine from 'alpinejs';
 import { generateGoogleCalendarUrl, downloadIcsFile } from './utils/calendar.js';
+import { buildWhatsAppUrl } from './utils/whatsapp.js';
+import { timelineEvents, timelineCategories } from './data/timelineData.js';
 
 const eventDetails = {
   title: 'Tupi em Consciência: Samba, Memória e Vozes Negras',
@@ -59,6 +61,27 @@ Alpine.data('calendarManager', () => ({
   },
   downloadIcs() {
     downloadIcsFile(eventDetails);
+  }
+}));
+
+Alpine.data('timelineManager', () => ({
+  activeCategory: 'todos',
+  categories: timelineCategories,
+  events: timelineEvents,
+
+  get filteredEvents() {
+    if (this.activeCategory === 'todos') {
+      return this.events;
+    }
+    return this.events.filter(e => e.category === this.activeCategory);
+  }
+}));
+
+Alpine.data('whatsappHelper', () => ({
+  phone: '(18) 99799-8362',
+  getWorkshopUrl(instrument = 'Percussão Geral') {
+    const msg = `Olá Leonardo e Bloco Batucaki! Gostaria de me inscrever / saber mais sobre as aulas gratuitas de percussão (${instrument}) na AABB!`;
+    return buildWhatsAppUrl(this.phone, msg);
   }
 }));
 
