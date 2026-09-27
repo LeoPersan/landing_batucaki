@@ -2,6 +2,7 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import path from 'node:path';
+import { execSync } from 'node:child_process';
 import { fileURLToPath } from 'node:url';
 
 const __filename = fileURLToPath(import.meta.url);
@@ -10,6 +11,12 @@ const rootDir = path.resolve(__dirname, '..');
 
 test('Build Output: dist directory contains production assets', () => {
   const distPath = path.join(rootDir, 'dist');
+  
+  // Se a pasta dist ainda não tiver sido criada (ex: execução isolada do teste), gera o build
+  if (!fs.existsSync(distPath)) {
+    execSync('npm run build', { cwd: rootDir, stdio: 'pipe' });
+  }
+
   assert.ok(fs.existsSync(distPath), 'dist directory must exist after build');
 
   const distHtmlPath = path.join(distPath, 'index.html');
