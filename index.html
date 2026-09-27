@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tupi em Consciência — Samba, Memória e Vozes Negras | Bloco Batucaki</title>
+  <meta name="description" content="Espetáculo musical gratuito no Dia da Consciência Negra em Tupi Paulista - SP. Realização Bloco Carnavalesco Batucaki via Lei Aldir Blanc (PNAB 2026).">
+  <link rel="icon" type="image/jpeg" href="images/batucaki/logo_batucaki_profile.jpg">
+  <link rel="stylesheet" href="./src/style.css">
+</head>
+<body class="bg-[#0a0b0e] text-gray-100 antialiased selection:bg-amber-500 selection:text-black">
+
+  <!-- Header / Navigation -->
+  <header x-data="{ mobileMenuOpen: false }" class="fixed top-0 left-0 right-0 z-50 glass-header">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20">
+        
+        <!-- Brand Logo -->
+        <a href="#hero" class="flex items-center gap-3 group">
+          <img src="images/batucaki/logo_batucaki_profile.jpg" alt="Logo Bloco Batucaki" class="w-12 h-12 rounded-full border-2 border-amber-500/80 shadow-md group-hover:scale-105 transition-transform duration-300">
+          <div class="flex flex-col">
+            <span class="font-display font-black text-xl tracking-wider text-white group-hover:text-amber-400 transition-colors">BATUCAKI</span>
+            <span class="text-[10px] tracking-widest text-amber-500/90 uppercase font-semibold">Bloco Carnavalesco</span>
+          </div>
+        </a>
+
+        <!-- Desktop Navigation Links -->
+        <nav class="hidden md:flex items-center gap-8">
+          <a href="#espetaculo" class="text-sm font-medium text-gray-300 hover:text-amber-400 transition-colors">O Espetáculo</a>
+          <a href="#vozes-negras" class="text-sm font-medium text-gray-300 hover:text-amber-400 transition-colors">Vozes Negras</a>
+          <a href="#sobre-bloco" class="text-sm font-medium text-gray-300 hover:text-amber-400 transition-colors">O Bloco</a>
+          <a href="#oficinas" class="text-sm font-medium text-gray-300 hover:text-amber-400 transition-colors">Oficinas Gratuitas</a>
+          <a href="#portfolio" class="text-sm font-medium text-gray-300 hover:text-amber-400 transition-colors">Portfólio</a>
+          <a href="#localizacao" class="text-sm font-medium text-gray-300 hover:text-amber-400 transition-colors">Localização</a>
+        </nav>
+
+        <!-- CTA Button -->
+        <div class="hidden md:flex items-center gap-4">
+          <a href="#oficinas" class="inline-flex items-center justify-center px-5 py-2.5 rounded-full text-xs font-bold uppercase tracking-wider text-black bg-gradient-to-r from-amber-400 via-amber-500 to-amber-600 hover:from-amber-300 hover:to-amber-500 shadow-lg shadow-amber-500/20 hover:shadow-amber-500/40 hover:scale-105 active:scale-95 transition-all duration-200">
+            🥁 Aulas Gratuitas
+          </a>
+        </div>
+
+        <!-- Mobile Menu Toggle Button -->
+        <div class="md:hidden flex items-center">
+          <button @click="mobileMenuOpen = !mobileMenuOpen" type="button" class="p-2 rounded-lg text-gray-400 hover:text-white hover:bg-white/5 focus:outline-none focus:ring-2 focus:ring-amber-500" aria-label="Abrir menu">
+            <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path x-show="!mobileMenuOpen" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+              <path x-show="mobileMenuOpen" x-cloak stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mobile Dropdown Menu -->
+    <div x-show="mobileMenuOpen" x-cloak @click.away="mobileMenuOpen = false" class="md:hidden glass-panel border-t border-white/10 px-4 pt-3 pb-6 space-y-3">
+      <a @click="mobileMenuOpen = false" href="#espetaculo" class="block px-3 py-2 rounded-md text-base font-medium text-gray-200 hover:text-amber-400 hover:bg-white/5">O Espetáculo</a>
+      <a @click="mobileMenuOpen = false" href="#vozes-negras" class="block px-3 py-2 rounded-md text-base font-medium text-gray-200 hover:text-amber-400 hover:bg-white/5">Vozes Negras</a>
+      <a @click="mobileMenuOpen = false" href="#sobre-bloco" class="block px-3 py-2 rounded-md text-base font-medium text-gray-200 hover:text-amber-400 hover:bg-white/5">O Bloco</a>
+      <a @click="mobileMenuOpen = false" href="#oficinas" class="block px-3 py-2 rounded-md text-base font-medium text-gray-200 hover:text-amber-400 hover:bg-white/5">Oficinas Gratuitas</a>
+      <a @click="mobileMenuOpen = false" href="#portfolio" class="block px-3 py-2 rounded-md text-base font-medium text-gray-200 hover:text-amber-400 hover:bg-white/5">Portfólio</a>
+      <a @click="mobileMenuOpen = false" href="#localizacao" class="block px-3 py-2 rounded-md text-base font-medium text-gray-200 hover:text-amber-400 hover:bg-white/5">Localização</a>
+      <div class="pt-2">
+        <a @click="mobileMenuOpen = false" href="#oficinas" class="w-full text-center block px-4 py-3 rounded-full text-sm font-bold uppercase tracking-wider text-black bg-gradient-to-r from-amber-400 to-amber-600 shadow-md">
+          🥁 Iniciar Aulas Gratuitas
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="hero" class="relative pt-32 pb-20 lg:pt-40 lg:pb-32 overflow-hidden">
+    <!-- Ambient Glow Background -->
+    <div class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-amber-500/10 rounded-full blur-[140px] pointer-events-none"></div>
+    <div class="absolute top-1/3 left-10 w-96 h-96 bg-red-600/10 rounded-full blur-[120px] pointer-events-none"></div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      
+      <!-- Edital & PNAB Badge -->
+      <div class="flex justify-center mb-6">
+        <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full glass-panel border border-amber-500/40 text-xs font-semibold text-amber-300">
+          <span class="w-2 h-2 rounded-full bg-amber-400 animate-ping"></span>
+          <span>Política Nacional Aldir Blanc (PNAB) · Edital nº 01/2026 de Tupi Paulista</span>
+        </div>
+      </div>
+
+      <!-- Main Titles -->
+      <div class="text-center max-w-4xl mx-auto">
+        <h1 class="text-4xl sm:text-6xl lg:text-7xl font-black tracking-tight leading-none mb-4">
+          <span class="text-white">Tupi em</span>
+          <span class="gradient-gold-text block sm:inline"> Consciência</span>
+        </h1>
+        <p class="text-xl sm:text-2xl lg:text-3xl font-bold text-amber-400/90 tracking-wide uppercase mb-6 font-display">
+          Samba, Memória e Vozes Negras
+        </p>
+        <p class="text-base sm:text-lg text-gray-300 max-w-2xl mx-auto leading-relaxed mb-10">
+          Um espetáculo musical gratuito de celebração e reflexão no <strong class="text-white">Dia Nacional da Consciência Negra</strong>. 
+          Banda ao vivo, a batucada enérgica do <strong class="text-amber-400">Batucaki</strong> e o protagonismo de personalidades negras regionais.
+        </p>
+
+        <!-- Event Key Data Highlights Card -->
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 max-w-3xl mx-auto mb-12">
+          <div class="glass-panel p-4 rounded-2xl border border-white/10 flex flex-col items-center justify-center">
+            <span class="text-xs uppercase tracking-widest text-amber-400 font-semibold mb-1">📅 Data</span>
+            <span class="text-lg font-bold text-white">20 de Novembro de 2026</span>
+            <span class="text-xs text-gray-400">Dia da Consciência Negra</span>
+          </div>
+          <div class="glass-panel p-4 rounded-2xl border border-white/10 flex flex-col items-center justify-center">
+            <span class="text-xs uppercase tracking-widest text-amber-400 font-semibold mb-1">⏰ Formato & Duração</span>
+            <span class="text-lg font-bold text-white">2 Horas de Espetáculo</span>
+            <span class="text-xs text-green-400 font-medium">100% Gratuito e Aberto</span>
+          </div>
+          <div class="glass-panel p-4 rounded-2xl border border-white/10 flex flex-col items-center justify-center">
+            <span class="text-xs uppercase tracking-widest text-amber-400 font-semibold mb-1">📍 Local</span>
+            <span class="text-lg font-bold text-white">Praça Dr. Ilton da Costa Oliveira</span>
+            <span class="text-xs text-gray-400">Tupi Paulista — SP</span>
+          </div>
+        </div>
+
+        <!-- Real-Time Countdown Timer -->
+        <div x-data="countdown" class="max-w-2xl mx-auto mb-10">
+          <div class="glass-panel-gold rounded-3xl p-6 sm:p-8 shadow-2xl relative overflow-hidden">
+            <div class="text-xs uppercase tracking-widest text-amber-300 font-bold mb-4">Contagem Regressiva para o Espetáculo</div>
+            
+            <div class="grid grid-cols-4 gap-3 sm:gap-6 text-center">
+              <div class="bg-black/40 rounded-2xl p-3 sm:p-4 border border-white/5">
+                <span x-text="days" class="font-display font-black text-3xl sm:text-5xl text-white block">00</span>
+                <span class="text-[10px] sm:text-xs text-gray-400 uppercase tracking-wider mt-1 block">Dias</span>
+              </div>
+              <div class="bg-black/40 rounded-2xl p-3 sm:p-4 border border-white/5">
+                <span x-text="hours" class="font-display font-black text-3xl sm:text-5xl text-amber-400 block">00</span>
+                <span class="text-[10px] sm:text-xs text-gray-400 uppercase tracking-wider mt-1 block">Horas</span>
+              </div>
+              <div class="bg-black/40 rounded-2xl p-3 sm:p-4 border border-white/5">
+                <span x-text="minutes" class="font-display font-black text-3xl sm:text-5xl text-white block">00</span>
+                <span class="text-[10px] sm:text-xs text-gray-400 uppercase tracking-wider mt-1 block">Minutos</span>
+              </div>
+              <div class="bg-black/40 rounded-2xl p-3 sm:p-4 border border-white/5">
+                <span x-text="seconds" class="font-display font-black text-3xl sm:text-5xl text-red-500 block">00</span>
+                <span class="text-[10px] sm:text-xs text-gray-400 uppercase tracking-wider mt-1 block">Segundos</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Action & Calendar Buttons -->
+        <div x-data="calendarManager" class="flex flex-wrap items-center justify-center gap-4">
+          <a :href="googleCalendarUrl" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-6 py-3.5 rounded-full text-sm font-bold text-black bg-gradient-to-r from-amber-400 via-amber-500 to-amber-600 hover:from-amber-300 hover:to-amber-500 shadow-xl shadow-amber-500/25 hover:scale-105 active:scale-95 transition-all">
+            <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+            </svg>
+            Adicionar ao Google Calendar
+          </a>
+
+          <button @click="downloadIcs()" type="button" class="inline-flex items-center gap-2 px-6 py-3.5 rounded-full text-sm font-bold text-white glass-panel hover:bg-white/10 border border-white/15 hover:border-amber-500/50 hover:scale-105 active:scale-95 transition-all">
+            <svg class="w-5 h-5 text-amber-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+            </svg>
+            Salvar Arquivo (.ics)
+          </button>
+
+          <a href="#espetaculo" class="inline-flex items-center gap-2 px-6 py-3.5 rounded-full text-sm font-semibold text-gray-300 hover:text-white hover:bg-white/5 transition-colors">
+            Conhecer o Projeto ↓
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <script type="module" src="./src/main.js"></script>
+</body>
+</html>
