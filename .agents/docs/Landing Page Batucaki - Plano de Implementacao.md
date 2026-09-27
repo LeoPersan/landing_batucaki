@@ -2,7 +2,7 @@
 
 - **Especificação / Contexto:** [GEMINI.md](file:///home/leonardo/code/landing_batucaki/GEMINI.md)
 - **Data do Planejamento:** 2026-09-27
-- **Status:** Aguardando Execução
+- **Status:** Concluído (100% Testado e Validado)
 - **Stack Técnica:** HTML5 semântico, Tailwind CSS v4, Alpine.js, Vite e Node.js Test Runner (`node:test`)
 - **Deploy:** GitHub Pages via GitHub Actions (`dist/`)
 
@@ -31,15 +31,16 @@ A solução adotará a estética **Dark Mode Afro-Brasileiro Sofisticado**, com 
 
 ## Resumo das Etapas (Commits)
 
-| Etapa | Nome da Etapa | Descrição Sucinta | Tipo Commit | Arquivo Detalhado |
-|---|---|---|---|---|
-| **01** | Configuração do Ambiente e Tooling | Setup do Vite, Tailwind CSS v4, Alpine.js, scripts de teste e GitHub Actions CI/CD | `chore` | [Etapa 01](file:///home/leonardo/code/landing_batucaki/.agents/docs/Landing%20Page%20Batucaki%20-%20Etapa%2001%20-%20Configuracao%20do%20Ambiente%20e%20Tooling.md) |
-| **02** | Design System e Estilos Globais | Configuração de variáveis CSS, paleta de cores afro-brasileira, tipografia e utilitários | `feat` | [Etapa 02](file:///home/leonardo/code/landing_batucaki/.agents/docs/Landing%20Page%20Batucaki%20-%20Etapa%2002%20-%20Design%20System%20e%20Estilos%20Globais.md) |
-| **03** | Navbar, Hero, Countdown e Calendário | Implementação do cabeçalho responsivo, Hero com contador regressivo e exportação de calendário | `feat` | [Etapa 03](file:///home/leonardo/code/landing_batucaki/.agents/docs/Landing%20Page%20Batucaki%20-%20Etapa%2003%20-%20Navbar%20Hero%20Countdown%20e%20Calendario.md) |
-| **04** | O Espetáculo, Vozes Negras e O Bloco | Seções do evento 20/11, painel dos oradores convidados e história do Batucaki com mini bio do regente | `feat` | [Etapa 04](file:///home/leonardo/code/landing_batucaki/.agents/docs/Landing%20Page%20Batucaki%20-%20Etapa%2004%20-%20O%20Espetaculo%20Vozes%20Negras%20e%20O%20Bloco.md) |
-| **05** | Oficinas Gratuitas e Portfólio Interativo | Seção de oficinas com CTA dinâmico WhatsApp e linha do tempo interativa com fotos reais | `feat` | [Etapa 05](file:///home/leonardo/code/landing_batucaki/.agents/docs/Landing%20Page%20Batucaki%20-%20Etapa%2005%20-%20Oficinas%20Gratuitas%20e%20Portfolio%20Interativo.md) |
-| **06** | Localização, Acessibilidade e Transparência PNAB | Mapa com rotas Maps/Waze, recursos de acessibilidade, ficha técnica, selos MinC/PNAB e SEO | `feat` | [Etapa 06](file:///home/leonardo/code/landing_batucaki/.agents/docs/Landing%20Page%20Batucaki%20-%20Etapa%2006%20-%20Localizacao%20Acessibilidade%20e%20Transparencia%20PNAB.md) |
-| **07** | Build Final, Validação E2E e Deploy Ready | Testes de ponta a ponta, otimização de assets e validação final do build para GitHub Pages | `chore` | [Etapa 07](file:///home/leonardo/code/landing_batucaki/.agents/docs/Landing%20Page%20Batucaki%20-%20Etapa%2007%20-%20Build%20Final%20Validacao%20E2E%20e%20Deploy%20Ready.md) |
+| Etapa | Nome da Etapa | Descrição Sucinta | Tipo Commit | Status | Arquivo Detalhado |
+|---|---|---|---|---|---|
+| **01** | Configuração do Ambiente e Tooling | Setup do Vite, Tailwind CSS v4, Alpine.js, scripts de teste e GitHub Actions CI/CD | `chore` | Concluído | [Etapa 01](file:///home/leonardo/code/landing_batucaki/.agents/docs/Landing%20Page%20Batucaki%20-%20Etapa%2001%20-%20Configuracao%20do%20Ambiente%20e%20Tooling.md) |
+| **02** | Design System e Estilos Globais | Configuração de variáveis CSS, paleta de cores afro-brasileira, tipografia e utilitários | `feat` | Concluído | [Etapa 02](file:///home/leonardo/code/landing_batucaki/.agents/docs/Landing%20Page%20Batucaki%20-%20Etapa%2002%20-%20Design%20System%20e%20Estilos%20Globais.md) |
+| **03** | Navbar, Hero, Countdown e Calendário | Implementação do cabeçalho responsivo, Hero com contador regressivo e exportação de calendário | `feat` | Concluído | [Etapa 03](file:///home/leonardo/code/landing_batucaki/.agents/docs/Landing%20Page%20Batucaki%20-%20Etapa%2003%20-%20Navbar%20Hero%20Countdown%20e%20Calendario.md) |
+| **04** | O Espetáculo, Vozes Negras e O Bloco | Seções do evento 20/11, painel dos oradores convidados e história do Batucaki com mini bio do regente | `feat` | Concluído | [Etapa 04](file:///home/leonardo/code/landing_batucaki/.agents/docs/Landing%20Page%20Batucaki%20-%20Etapa%2004%20-%20O%20Espetaculo%20Vozes%20Negras%20e%20O%20Bloco.md) |
+| **05** | Oficinas Gratuitas e Portfólio Interativo | Seção de oficinas com CTA dinâmico WhatsApp e linha do tempo interativa com fotos reais | `feat` | Concluído | [Etapa 05](file:///home/leonardo/code/landing_batucaki/.agents/docs/Landing%20Page%20Batucaki%20-%20Etapa%2005%20-%20Oficinas%20Gratuitas%20e%20Portfolio%20Interativo.md) |
+| **06** | Localização, Acessibilidade e Transparência PNAB | Mapa com rotas Maps/Waze, recursos de acessibilidade, ficha técnica, selos MinC/PNAB e SEO | `feat` | Concluído | [Etapa 06](file:///home/leonardo/code/landing_batucaki/.agents/docs/Landing%20Page%20Batucaki%20-%20Etapa%2006%20-%20Localizacao%20Acessibilidade%20e%20Transparencia%20PNAB.md) |
+| **07** | Build Final, Validação E2E e Deploy Ready | Testes de ponta a ponta, otimização de assets e validação final do build para GitHub Pages | `chore` | Concluído | [Etapa 07](file:///home/leonardo/code/landing_batucaki/.agents/docs/Landing%20Page%20Batucaki%20-%20Etapa%2007%20-%20Build%20Final%20Validacao%20E2E%20e%20Deploy%20Ready.md) |
+
 
 ---
 
