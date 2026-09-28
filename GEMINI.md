@@ -136,12 +136,22 @@ Fundado em **maio de 2025**, o Batucaki nasceu para democratizar o acesso à per
 Os seguintes arquivos de imagem foram baixados do perfil oficial `@bloco.batucaki` e estão disponíveis localmente em `public/images/batucaki/`:
 
 1. `logo_batucaki_profile.jpg`: Foto de perfil / Logo oficial do Batucaki
-2. `consciencia_negra_2025.jpg`: Registro da apresentação cultural no Dia da Consciência Negra (20/11/2025)
-3. `carnaval_2026.webp`: Registro da Apresentação de Carnaval na Praça Arthur Pagnozzi (15/02/2026)
-4. `fundacao_maio_2025.jpg`: Registro do início das atividades e fundação na AABB (Maio/2025)
-5. `igualdade_racial_2025.webp`: Conferência Regional de Promoção da Igualdade Racial (02/06/2025)
-6. `corrida_oab.webp`: Batucada de rua na Corrida da OAB Dracena
-7. `aula_aabb.jpg`: Aulas gratuitas de percussão na AABB
-8. `ensaio_domingo.jpg`: Ensaios abertos de domingo
-9. `santa_mercedes.jpg`: Apresentação regional em Santa Mercedes
+2. `logo.png` / `logotipo.png`: Logomarcas transparentes de alta resolução
+3. `corrida_oab_ritmistas_acao.webp`: Registro profissional dos ritmistas em ação na Corrida da OAB
+4. `futsal_lnf_dracena.webp`: Bateria e ritmistas animando a torcida na Liga Nacional de Futsal (LNF)
+5. `futsal_torcida_bateria.webp`: Presença rítmica da bateria nos jogos esportivos regionais
+6. `carnaval_praca_alegria.jpg`: Bateria Show de Carnaval na Praça Arthur Pagnozzi
+7. `consciencia_negra_2025.jpg`: Registro da apresentação cultural no Dia da Consciência Negra (20/11/2025)
+8. `cult_sp_estrada.webp`: Apresentação cultural no Circuito Cult SP na Estrada (30/11/2025)
+9. `natal_praca_dracena.webp`: Apresentação cultural de Natal na Praça Arthur Pagnozzi (19/12/2025)
+10. `aniversario_ritmista.webp`: Ritmistas e integração comunitária do coletivo
+11. `oficina_aabb_ritmo.jpg`: Oficinas gratuitas e aulas práticas de ritmo na AABB
+12. `ensaio_praca_coletivo.jpg`: Ensaios abertos e ocupação do espaço público na praça
+13. `integrantes_destaque.webp`: Celebração e protagonismo dos integrantes do bloco
+14. `igualdade_racial_2025.webp`: Conferência Regional de Promoção da Igualdade Racial (02/06/2025)
+15. `santa_mercedes.jpg`: Apresentação regional e intercâmbio cultural em Santa Mercedes
+16. `fundacao_maio_2025.jpg`: Registro do início das atividades e fundação na AABB (Maio/2025)
+17. `carnaval_2026.webp`: Registro da Apresentação de Carnaval 2026
+18. `aula_aabb.jpg`: Aulas de percussão na AABB
+19. `ensaio_domingo.jpg`: Ensaios abertos de domingo
 

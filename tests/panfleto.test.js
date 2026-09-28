@@ -42,3 +42,19 @@ test('Panfleto A5: src/style.css defines A5 print dimensions', () => {
   assert.ok(css.includes('@media print'), 'Must contain @media print');
   assert.ok(css.includes('.no-print'), 'Must define .no-print utility');
 });
+
+test('Panfleto A5: contains rich ritmistas imagery on front and back', () => {
+  const panfletoPath = path.join(rootDir, 'panfleto.html');
+  const content = fs.readFileSync(panfletoPath, 'utf8');
+
+  // Verify Front page action strip photos
+  assert.ok(content.includes('corrida_oab_ritmistas_acao.webp'), 'Front must include corrida_oab_ritmistas_acao');
+  assert.ok(content.includes('carnaval_praca_alegria.jpg'), 'Front must include carnaval_praca_alegria');
+  assert.ok(content.includes('consciencia_negra_2025.jpg'), 'Front must include consciencia_negra_2025');
+
+  // Verify Back page mini-gallery photos
+  assert.ok(content.includes('oficina_aabb_ritmo.jpg'), 'Back must include oficina_aabb_ritmo');
+  assert.ok(content.includes('futsal_lnf_dracena.webp'), 'Back must include futsal_lnf_dracena');
+  assert.ok(content.includes('aniversario_ritmista.webp'), 'Back must include aniversario_ritmista');
+  assert.ok(content.includes('cult_sp_estrada.webp'), 'Back must include cult_sp_estrada');
+});

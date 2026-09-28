@@ -68,6 +68,20 @@ Alpine.data('timelineManager', () => ({
   activeCategory: 'todos',
   categories: timelineCategories,
   events: timelineEvents,
+  modalOpen: false,
+  selectedItem: null,
+
+  openModal(item) {
+    this.selectedItem = item;
+    this.modalOpen = true;
+    document.body.style.overflow = 'hidden';
+  },
+
+  closeModal() {
+    this.modalOpen = false;
+    this.selectedItem = null;
+    document.body.style.overflow = '';
+  },
 
   get filteredEvents() {
     if (this.activeCategory === 'todos') {

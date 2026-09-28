@@ -36,110 +36,145 @@
     <!-- ========================================================
          PÁGINA 1: FRENTE DO PANFLETO A5 (148mm x 210mm)
          ======================================================== -->
-    <article :class="isLightMode ? 'bg-white text-gray-900 border-gray-300' : 'bg-[#0d0e13] text-gray-100 border-amber-500/30'" class="a5-page p-[8mm] flex flex-col justify-between border print:border-none">
+    <article :class="isLightMode ? 'bg-white text-gray-900 border-gray-300' : 'bg-[#0d0e13] text-gray-100 border-amber-500/30'" class="a5-page p-[6mm] flex flex-col justify-between border print:border-none">
       
-      <!-- Top Badges & Header -->
-      <div>
-        <header class="flex items-center justify-between border-b pb-2 mb-3" :class="isLightMode ? 'border-gray-200' : 'border-white/10'">
-          <div class="flex items-center gap-2">
-            <img src="images/batucaki/logo.png" alt="Logo Batucaki" class="w-10 h-10 rounded-full border border-amber-500 object-cover shadow-sm">
+      <!-- Top Section: Header & Badges -->
+      <div class="flex flex-col gap-2">
+        
+        <!-- Header -->
+        <header class="flex items-center justify-between border-b pb-1.5" :class="isLightMode ? 'border-gray-200' : 'border-white/10'">
+          <div class="flex items-center gap-2.5">
+            <img src="images/batucaki/logo.png" alt="Logo Batucaki" class="w-12 h-12 rounded-full border-2 border-amber-500 object-cover shadow-md">
             <div>
-              <h1 class="font-display font-black text-sm tracking-wider leading-none" :class="isLightMode ? 'text-gray-900' : 'text-white'">BATUCAKI</h1>
-              <span class="text-[8px] font-bold uppercase tracking-widest text-amber-500">Bloco Carnavalesco</span>
+              <h1 class="font-display font-black text-lg tracking-wider leading-none" :class="isLightMode ? 'text-gray-900' : 'text-white'">BATUCAKI</h1>
+              <span class="text-[9.5px] font-extrabold uppercase tracking-widest text-amber-500 mt-0.5 block">Bloco Carnavalesco</span>
             </div>
           </div>
           <div class="text-right">
-            <span class="text-[7.5px] font-bold uppercase tracking-wider px-2 py-0.5 rounded-full" :class="isLightMode ? 'bg-amber-100 text-amber-800 border border-amber-300' : 'bg-amber-500/20 text-amber-300 border border-amber-500/40'">
+            <span class="text-[9px] font-black uppercase tracking-wider px-3 py-1 rounded-full shadow-sm inline-block" :class="isLightMode ? 'bg-amber-100 text-amber-900 border border-amber-300' : 'bg-amber-500/20 text-amber-300 border border-amber-500/40'">
               PNAB 2026 · Tupi Paulista
             </span>
           </div>
         </header>
 
-        <!-- Main Title & Highlight -->
-        <div class="text-center my-3">
-          <span class="text-[9px] font-bold uppercase tracking-widest block mb-1 text-amber-500">Dia Nacional da Consciência Negra</span>
-          <h2 class="font-display font-black text-2xl leading-tight mb-1" :class="isLightMode ? 'text-gray-950' : 'gradient-gold-text'">
+        <!-- Main Title -->
+        <div class="text-center pt-0.5">
+          <span class="text-[10px] font-black uppercase tracking-widest block text-amber-500 mb-0.5">✨ Dia Nacional da Consciência Negra</span>
+          <h2 class="font-display font-black text-[25px] sm:text-[28px] leading-none mb-0.5" :class="isLightMode ? 'text-gray-950' : 'gradient-gold-text'">
             Tupi em Consciência
           </h2>
-          <p class="font-display font-bold text-xs tracking-wider uppercase" :class="isLightMode ? 'text-red-700' : 'text-amber-400'">
+          <p class="font-display font-black text-xs sm:text-sm tracking-wider uppercase" :class="isLightMode ? 'text-red-700' : 'text-amber-400'">
             Samba, Memória e Vozes Negras
           </p>
+          <span class="text-[9px] font-semibold text-gray-400 block mt-0.5">Espetáculo Musical Gratuito de 2 Horas na Praça Pública</span>
         </div>
 
-        <!-- Date & Location Box -->
-        <div class="rounded-xl p-3 my-3 text-center border" :class="isLightMode ? 'bg-amber-50/80 border-amber-200' : 'bg-black/50 border-amber-500/30'">
-          <div class="grid grid-cols-2 gap-2 text-left divide-x" :class="isLightMode ? 'divide-amber-200' : 'divide-white/10'">
+        <!-- Ritmistas Action Strip (3 Enlarged Photos - 34mm) -->
+        <div class="grid grid-cols-3 gap-2">
+          <div class="relative rounded-xl overflow-hidden h-[34mm] border shadow-md" :class="isLightMode ? 'border-amber-300' : 'border-amber-500/40'">
+            <img src="images/batucaki/corrida_oab_ritmistas_acao.webp" alt="Batucada na Rua" class="w-full h-full object-cover">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent flex items-end p-1.5">
+              <div>
+                <span class="text-[9px] font-black text-amber-300 block leading-tight">Batucada na Rua</span>
+                <span class="text-[7.5px] text-gray-300 font-medium">Ritmistas em Ação</span>
+              </div>
+            </div>
+          </div>
+          <div class="relative rounded-xl overflow-hidden h-[34mm] border shadow-md" :class="isLightMode ? 'border-red-300' : 'border-red-500/40'">
+            <img src="images/batucaki/carnaval_praca_alegria.jpg" alt="Bateria Show" class="w-full h-full object-cover">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent flex items-end p-1.5">
+              <div>
+                <span class="text-[9px] font-black text-red-400 block leading-tight">Bateria Show</span>
+                <span class="text-[7.5px] text-gray-300 font-medium">Alegria & Carnaval</span>
+              </div>
+            </div>
+          </div>
+          <div class="relative rounded-xl overflow-hidden h-[34mm] border shadow-md" :class="isLightMode ? 'border-amber-300' : 'border-amber-500/40'">
+            <img src="images/batucaki/consciencia_negra_2025.jpg" alt="Consciência Negra" class="w-full h-full object-cover">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent flex items-end p-1.5">
+              <div>
+                <span class="text-[9px] font-black text-amber-300 block leading-tight">Consciência Negra</span>
+                <span class="text-[7.5px] text-gray-300 font-medium">Tradição & Raiz</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Date & Location Box (Expanded) -->
+        <div class="rounded-2xl p-2.5 text-center border shadow-md" :class="isLightMode ? 'bg-amber-50/95 border-amber-300' : 'bg-black/70 border-amber-500/40'">
+          <div class="grid grid-cols-2 gap-2 text-left divide-x" :class="isLightMode ? 'divide-amber-300' : 'divide-white/10'">
             <div class="pr-2">
-              <span class="text-[8px] font-bold uppercase tracking-wider text-amber-500 block">📅 Quando</span>
-              <strong class="text-[12px] block font-black" :class="isLightMode ? 'text-gray-900' : 'text-white'">20 de Novembro</strong>
-              <span class="text-[9px] text-gray-500 block">2026 · A partir das 20h00</span>
+              <span class="text-[9.5px] font-black uppercase tracking-wider text-amber-500 block mb-0.5">📅 Quando</span>
+              <strong class="text-sm sm:text-base block font-black leading-tight" :class="isLightMode ? 'text-gray-950' : 'text-white'">20 de Novembro</strong>
+              <span class="text-[10px] text-amber-400 font-bold block mt-0.5">2026 · A partir das 20h00</span>
             </div>
             <div class="pl-2">
-              <span class="text-[8px] font-bold uppercase tracking-wider text-amber-500 block">📍 Onde</span>
-              <strong class="text-[11px] block font-bold leading-tight" :class="isLightMode ? 'text-gray-900' : 'text-white'">Praça Dr. Ilton da Costa Oliveira</strong>
-              <span class="text-[9px] text-gray-500 block">Tupi Paulista — SP</span>
+              <span class="text-[9.5px] font-black uppercase tracking-wider text-amber-500 block mb-0.5">📍 Onde</span>
+              <strong class="text-xs sm:text-[13px] block font-black leading-tight" :class="isLightMode ? 'text-gray-950' : 'text-white'">Praça Dr. Ilton da Costa Oliveira</strong>
+              <span class="text-[10px] text-gray-400 font-semibold block mt-0.5">Tupi Paulista — SP</span>
             </div>
           </div>
         </div>
 
-        <!-- Program Highlights Chips -->
-        <div class="space-y-1.5 my-3">
-          <div class="rounded-lg px-2.5 py-1.5 flex items-center justify-between text-[9.5px] border" :class="isLightMode ? 'bg-gray-50 border-gray-200' : 'bg-white/5 border-white/5'">
-            <span class="font-bold flex items-center gap-1.5">
-              <span>🎶</span> Banda Profissional Convidada
+        <!-- Program Highlights Chips (Enlarged) -->
+        <div class="space-y-1.5">
+          <div class="rounded-xl px-3 py-1.5 flex items-center justify-between text-[11px] border shadow-sm" :class="isLightMode ? 'bg-gray-50 border-gray-200' : 'bg-white/5 border-white/10'">
+            <span class="font-extrabold flex items-center gap-2">
+              <span class="text-base">🎶</span> Banda Profissional Convidada
             </span>
-            <span class="text-[8.5px] font-semibold text-amber-500">Samba & Pagode</span>
+            <span class="text-[9.5px] font-bold text-amber-500 bg-amber-500/15 border border-amber-500/30 px-2.5 py-0.5 rounded-full">Samba & Pagode</span>
           </div>
 
-          <div class="rounded-lg px-2.5 py-1.5 flex items-center justify-between text-[9.5px] border" :class="isLightMode ? 'bg-gray-50 border-gray-200' : 'bg-white/5 border-white/5'">
-            <span class="font-bold flex items-center gap-1.5">
-              <span>🥁</span> Bateria do Bloco Batucaki
+          <div class="rounded-xl px-3 py-1.5 flex items-center justify-between text-[11px] border shadow-sm" :class="isLightMode ? 'bg-gray-50 border-gray-200' : 'bg-white/5 border-white/10'">
+            <span class="font-extrabold flex items-center gap-2">
+              <span class="text-base">🥁</span> Bateria do Bloco Batucaki
             </span>
-            <span class="text-[8.5px] font-semibold text-red-500">Percussão Carnavalesca</span>
+            <span class="text-[9.5px] font-bold text-red-400 bg-red-500/15 border border-red-500/30 px-2.5 py-0.5 rounded-full">Percussão Carnavalesca</span>
           </div>
 
-          <div class="rounded-lg px-2.5 py-1.5 flex items-center justify-between text-[9.5px] border" :class="isLightMode ? 'bg-gray-50 border-gray-200' : 'bg-white/5 border-white/5'">
-            <span class="font-bold flex items-center gap-1.5">
-              <span>🎙️</span> Falas de Personalidades Negras
+          <div class="rounded-xl px-3 py-1.5 flex items-center justify-between text-[11px] border shadow-sm" :class="isLightMode ? 'bg-gray-50 border-gray-200' : 'bg-white/5 border-white/10'">
+            <span class="font-extrabold flex items-center gap-2">
+              <span class="text-base">🎙️</span> Falas de Personalidades Negras
             </span>
-            <span class="text-[8.5px] font-semibold text-amber-500">Memória & Resistência</span>
+            <span class="text-[9.5px] font-bold text-amber-400 bg-amber-500/15 border border-amber-500/30 px-2.5 py-0.5 rounded-full">Memória & Resistência</span>
           </div>
         </div>
 
         <!-- Accessibility Callout -->
-        <div class="rounded-lg px-3 py-1.5 text-[8.5px] flex items-center justify-center gap-2 border" :class="isLightMode ? 'bg-green-50 text-green-800 border-green-200' : 'bg-green-950/40 text-green-300 border-green-500/30'">
-          <span>♿</span>
-          <span class="font-semibold">Espaço Plano e Assentos Reservados para Idosos e PCDs</span>
+        <div class="rounded-xl px-3 py-1.5 text-[10px] flex items-center justify-center gap-2 border font-bold shadow-sm" :class="isLightMode ? 'bg-green-50 text-green-800 border-green-300' : 'bg-green-950/60 text-green-300 border-green-500/40'">
+          <span class="text-sm">♿</span>
+          <span>Espaço Plano e Assentos Reservados para Idosos e PCDs</span>
         </div>
+
       </div>
 
       <!-- Bottom: QR Code for Landing Page & Free Badge -->
       <footer class="pt-2 border-t" :class="isLightMode ? 'border-gray-200' : 'border-white/10'">
         <div class="flex items-center justify-between gap-3">
           
-          <div class="flex items-center gap-2.5">
-            <div class="w-[26mm] h-[26mm] bg-white p-1 rounded-lg border border-gray-300 shadow-sm flex items-center justify-center shrink-0">
+          <div class="flex items-center gap-3">
+            <div class="w-[28mm] h-[28mm] bg-white p-1 rounded-xl border border-gray-300 shadow-md flex items-center justify-center shrink-0">
               <div x-html="qrCodeEventSvg" class="w-full h-full flex items-center justify-center [&>svg]:w-full [&>svg]:h-full"></div>
             </div>
             <div>
-              <span class="text-[8px] font-bold uppercase text-amber-500 tracking-wider block">📲 Aponte a Câmera</span>
-              <strong class="text-[10px] block font-black leading-tight" :class="isLightMode ? 'text-gray-900' : 'text-white'">Acesse a Programação</strong>
-              <p class="text-[8px] text-gray-400 mt-0.5 leading-tight">Salve na sua agenda Google ou iCal e assista aos vídeos do projeto!</p>
+              <span class="text-[9.5px] font-black uppercase text-amber-500 tracking-wider block">📲 Aponte a Câmera</span>
+              <strong class="text-xs sm:text-sm block font-black leading-tight" :class="isLightMode ? 'text-gray-900' : 'text-white'">Acesse a Programação Completa</strong>
+              <p class="text-[9px] text-gray-400 mt-0.5 leading-tight">Adicione ao Google Calendar/iCal e veja vídeos da bateria!</p>
             </div>
           </div>
 
           <!-- Free Badge Stamp -->
           <div class="text-right shrink-0">
-            <div class="inline-block border-2 border-dashed rounded-xl px-2.5 py-1.5 text-center" :class="isLightMode ? 'border-amber-600 bg-amber-50 text-amber-900' : 'border-amber-500 bg-amber-500/10 text-amber-300'">
-              <span class="text-[7.5px] font-bold uppercase block leading-none">Entrada</span>
-              <strong class="text-xs font-black block leading-tight">100% GRATUITA</strong>
+            <div class="inline-block border-2 border-dashed rounded-2xl px-3.5 py-2 text-center shadow-md" :class="isLightMode ? 'border-amber-600 bg-amber-50 text-amber-950' : 'border-amber-500 bg-amber-500/20 text-amber-300'">
+              <span class="text-[8.5px] font-black uppercase block leading-none">Entrada</span>
+              <strong class="text-sm sm:text-base font-black block leading-tight mt-0.5">100% GRATUITA</strong>
             </div>
           </div>
 
         </div>
 
-        <div class="text-center mt-2 text-[7px] text-gray-500">
-          Política Nacional Aldir Blanc (Lei 14.399/2022) · MinC · Prefeitura de Tupi Paulista
+        <div class="text-center mt-1.5 text-[8px] text-gray-500 font-medium">
+          Política Nacional Aldir Blanc (Lei 14.399/2022) · Ministério da Cultura · Prefeitura Municipal de Tupi Paulista
         </div>
       </footer>
 
@@ -148,117 +183,172 @@
     <!-- ========================================================
          PÁGINA 2: VERSO DO PANFLETO A5 (148mm x 210mm)
          ======================================================== -->
-    <article :class="isLightMode ? 'bg-white text-gray-900 border-gray-300' : 'bg-[#0d0e13] text-gray-100 border-amber-500/30'" class="a5-page p-[8mm] flex flex-col justify-between border print:border-none">
+    <article :class="isLightMode ? 'bg-white text-gray-900 border-gray-300' : 'bg-[#0d0e13] text-gray-100 border-amber-500/30'" class="a5-page p-[6mm] flex flex-col justify-between border print:border-none">
       
-      <!-- Top Section: Oradores / Vozes Negras -->
-      <div>
-        <header class="text-center border-b pb-2 mb-3" :class="isLightMode ? 'border-gray-200' : 'border-white/10'">
-          <span class="text-[8px] font-bold uppercase tracking-widest text-amber-500 block">Representatividade & Consciência</span>
-          <h3 class="font-display font-black text-base" :class="isLightMode ? 'text-gray-900' : 'text-white'">
+      <!-- Top Section: Oradores, Galeria, Oficinas e Regência -->
+      <div class="flex flex-col gap-2">
+        
+        <!-- Header -->
+        <header class="text-center border-b pb-1" :class="isLightMode ? 'border-gray-200' : 'border-white/10'">
+          <span class="text-[9.5px] font-black uppercase tracking-widest text-amber-500 block mb-0.5">Representatividade & Consciência</span>
+          <h3 class="font-display font-black text-lg sm:text-xl leading-tight" :class="isLightMode ? 'text-gray-900' : 'text-white'">
             Vozes Negras em Destaque no Espetáculo
           </h3>
+          <span class="text-[9px] text-gray-400 font-medium">Personalidades regionais convidadas para falas de conscientização e memória</span>
         </header>
 
-        <!-- 3 Speakers Mini-Grid -->
-        <div class="grid grid-cols-3 gap-2 mb-3">
+        <!-- 3 Speakers Cards Grid (Enlarged) -->
+        <div class="grid grid-cols-3 gap-2">
           
-          <div class="p-2 rounded-xl border text-center flex flex-col justify-between" :class="isLightMode ? 'bg-gray-50 border-gray-200' : 'bg-white/5 border-white/10'">
+          <div class="p-2 rounded-2xl border text-center flex flex-col justify-between shadow-sm" :class="isLightMode ? 'bg-gray-50 border-gray-200' : 'bg-white/5 border-white/10'">
             <div>
-              <span class="text-base block mb-1">⚖️</span>
-              <strong class="text-[8.5px] block font-bold leading-tight" :class="isLightMode ? 'text-gray-900' : 'text-white'">Dr. Ricardo Reis</strong>
-              <span class="text-[7.5px] text-amber-500 font-semibold block">Advogado</span>
+              <span class="text-xl block mb-0.5">⚖️</span>
+              <strong class="text-[10px] block font-black leading-tight" :class="isLightMode ? 'text-gray-900' : 'text-white'">Dr. Ricardo Reis</strong>
+              <span class="text-[8.5px] text-amber-400 font-bold block bg-amber-500/10 rounded-full py-0.5 mt-0.5">Advogado</span>
             </div>
-            <p class="text-[7px] text-gray-400 mt-1 leading-tight">Cidadania e Igualdade Racial</p>
+            <p class="text-[8.5px] text-gray-300 mt-0.5 leading-tight font-medium">Cidadania & Igualdade Racial</p>
           </div>
 
-          <div class="p-2 rounded-xl border text-center flex flex-col justify-between" :class="isLightMode ? 'bg-gray-50 border-gray-200' : 'bg-white/5 border-white/10'">
+          <div class="p-2 rounded-2xl border text-center flex flex-col justify-between shadow-sm" :class="isLightMode ? 'bg-gray-50 border-gray-200' : 'bg-white/5 border-white/10'">
             <div>
-              <span class="text-base block mb-1">📚</span>
-              <strong class="text-[8.5px] block font-bold leading-tight" :class="isLightMode ? 'text-gray-900' : 'text-white'">Profª Deocélia Souza</strong>
-              <span class="text-[7.5px] text-red-500 font-semibold block">Educadora</span>
+              <span class="text-xl block mb-0.5">📚</span>
+              <strong class="text-[10px] block font-black leading-tight" :class="isLightMode ? 'text-gray-900' : 'text-white'">Profª Deocélia Souza</strong>
+              <span class="text-[8.5px] text-red-400 font-bold block bg-red-500/10 rounded-full py-0.5 mt-0.5">Educadora</span>
             </div>
-            <p class="text-[7px] text-gray-400 mt-1 leading-tight">Educação e Memória Afro</p>
+            <p class="text-[8.5px] text-gray-300 mt-0.5 leading-tight font-medium">Educação & Memória Afro</p>
           </div>
 
-          <div class="p-2 rounded-xl border text-center flex flex-col justify-between" :class="isLightMode ? 'bg-gray-50 border-gray-200' : 'bg-white/5 border-white/10'">
+          <div class="p-2 rounded-2xl border text-center flex flex-col justify-between shadow-sm" :class="isLightMode ? 'bg-gray-50 border-gray-200' : 'bg-white/5 border-white/10'">
             <div>
-              <span class="text-base block mb-1">🥋</span>
-              <strong class="text-[8.5px] block font-bold leading-tight" :class="isLightMode ? 'text-gray-900' : 'text-white'">Mestre Jabá</strong>
-              <span class="text-[7.5px] text-amber-500 font-semibold block">Dendê Maré</span>
+              <span class="text-xl block mb-0.5">🥋</span>
+              <strong class="text-[10px] block font-black leading-tight" :class="isLightMode ? 'text-gray-900' : 'text-white'">Mestre Jabá</strong>
+              <span class="text-[8.5px] text-amber-400 font-bold block bg-amber-500/10 rounded-full py-0.5 mt-0.5">Dendê Maré</span>
             </div>
-            <p class="text-[7px] text-gray-400 mt-1 leading-tight">Capoeira e Ancestralidade</p>
+            <p class="text-[8.5px] text-gray-300 mt-0.5 leading-tight font-medium">Capoeira & Ancestralidade</p>
           </div>
 
         </div>
 
-        <!-- Workshops Section (Oficinas de Percussão) -->
-        <div class="rounded-2xl p-3 border mb-3" :class="isLightMode ? 'bg-amber-50 border-amber-300' : 'bg-gradient-to-br from-amber-500/10 via-black/40 to-black/60 border-amber-500/40'">
+        <!-- 4-Photo Ritmistas Mini-Gallery Grid (28mm) -->
+        <div>
+          <div class="flex items-center justify-between mb-1 px-0.5">
+            <span class="text-[9.5px] font-black uppercase tracking-wider text-amber-500">🥁 Galeria dos Ritmistas do Batucaki:</span>
+            <span class="text-[8.5px] text-gray-400 font-semibold">Dracena & Região</span>
+          </div>
+          <div class="grid grid-cols-4 gap-2">
+            <div class="relative rounded-xl overflow-hidden h-[28mm] border shadow-md" :class="isLightMode ? 'border-gray-200' : 'border-white/10'">
+              <img src="images/batucaki/oficina_aabb_ritmo.jpg" alt="Aulas na AABB" class="w-full h-full object-cover">
+              <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent flex items-end p-1.5">
+                <span class="text-[8px] font-black text-amber-300 leading-none">Oficinas AABB</span>
+              </div>
+            </div>
+            <div class="relative rounded-xl overflow-hidden h-[28mm] border shadow-md" :class="isLightMode ? 'border-gray-200' : 'border-white/10'">
+              <img src="images/batucaki/futsal_lnf_dracena.webp" alt="Torcida LNF" class="w-full h-full object-cover">
+              <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent flex items-end p-1.5">
+                <span class="text-[8px] font-black text-emerald-300 leading-none">Bateria LNF</span>
+              </div>
+            </div>
+            <div class="relative rounded-xl overflow-hidden h-[28mm] border shadow-md" :class="isLightMode ? 'border-gray-200' : 'border-white/10'">
+              <img src="images/batucaki/aniversario_ritmista.webp" alt="Ritmistas" class="w-full h-full object-cover">
+              <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent flex items-end p-1.5">
+                <span class="text-[8px] font-black text-red-400 leading-none">Comunidade</span>
+              </div>
+            </div>
+            <div class="relative rounded-xl overflow-hidden h-[28mm] border shadow-md" :class="isLightMode ? 'border-gray-200' : 'border-white/10'">
+              <img src="images/batucaki/cult_sp_estrada.webp" alt="Cult SP" class="w-full h-full object-cover">
+              <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent flex items-end p-1.5">
+                <span class="text-[8px] font-black text-amber-300 leading-none">Cult SP</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Workshops Section (Oficinas de Percussão - Rich Layout) -->
+        <div class="rounded-2xl p-3 border shadow-md" :class="isLightMode ? 'bg-amber-50/95 border-amber-300' : 'bg-gradient-to-br from-amber-500/15 via-black/60 to-black/80 border-amber-500/40'">
           <div class="flex items-center justify-between mb-1">
-            <h4 class="font-display font-black text-xs" :class="isLightMode ? 'text-amber-900' : 'text-amber-300'">
-              🥁 OFICINAS GRATUITAS DE PERCUSSÃO
+            <h4 class="font-display font-black text-xs sm:text-sm flex items-center gap-1.5" :class="isLightMode ? 'text-amber-950' : 'text-amber-300'">
+              <span class="text-sm">🥁</span> OFICINAS GRATUITAS DE PERCUSSÃO
             </h4>
-            <span class="text-[7.5px] font-bold uppercase px-1.5 py-0.5 rounded bg-amber-500 text-black">Aberto a Todos</span>
+            <span class="text-[8.5px] font-black uppercase px-2.5 py-0.5 rounded-full bg-amber-500 text-black shadow-sm">Aberto a Todos</span>
           </div>
           
-          <p class="text-[8px] leading-relaxed mb-2" :class="isLightMode ? 'text-gray-700' : 'text-gray-300'">
-            Aprenda a tocar tamborins, surdos, caixas e repiques! Não precisa ter instrumento e nem experiência prévia.
+          <p class="text-[10px] leading-relaxed mb-1.5" :class="isLightMode ? 'text-gray-800' : 'text-gray-300'">
+            Aprenda a tocar tamborins, surdos, caixas e repiques! Não precisa ter instrumento próprio e nem experiência prévia.
           </p>
 
-          <div class="grid grid-cols-2 gap-2 text-[8px] pt-1.5 border-t" :class="isLightMode ? 'border-amber-200' : 'border-white/10'">
+          <div class="flex flex-wrap gap-1 mb-2">
+            <span class="text-[8px] font-bold px-2 py-0.5 rounded-md border" :class="isLightMode ? 'bg-white border-amber-200 text-amber-900' : 'bg-black/50 border-amber-500/30 text-amber-300'">Tamborim</span>
+            <span class="text-[8px] font-bold px-2 py-0.5 rounded-md border" :class="isLightMode ? 'bg-white border-amber-200 text-amber-900' : 'bg-black/50 border-amber-500/30 text-amber-300'">Surdos (1ª e 2ª)</span>
+            <span class="text-[8px] font-bold px-2 py-0.5 rounded-md border" :class="isLightMode ? 'bg-white border-amber-200 text-amber-900' : 'bg-black/50 border-amber-500/30 text-amber-300'">Caixa de Guerra</span>
+            <span class="text-[8px] font-bold px-2 py-0.5 rounded-md border" :class="isLightMode ? 'bg-white border-amber-200 text-amber-900' : 'bg-black/50 border-amber-500/30 text-amber-300'">Repique & Agogô</span>
+          </div>
+
+          <div class="grid grid-cols-2 gap-2 text-[9.5px] pt-1.5 border-t" :class="isLightMode ? 'border-amber-300' : 'border-white/10'">
             <div>
-              <strong class="text-amber-500 block font-bold">🗓️ Quando:</strong>
-              <span :class="isLightMode ? 'text-gray-900' : 'text-white'" class="font-semibold">Toda Sexta às 19h30</span>
+              <strong class="text-amber-500 block font-black">🗓️ Quando:</strong>
+              <span :class="isLightMode ? 'text-gray-950' : 'text-white'" class="font-black text-xs">Toda Sexta às 19h30</span>
             </div>
             <div>
-              <strong class="text-amber-500 block font-bold">📍 Onde:</strong>
-              <span :class="isLightMode ? 'text-gray-900' : 'text-white'" class="font-semibold">AABB de Dracena</span>
+              <strong class="text-amber-500 block font-black">📍 Onde:</strong>
+              <span :class="isLightMode ? 'text-gray-950' : 'text-white'" class="font-black text-xs">AABB de Dracena — SP</span>
             </div>
           </div>
         </div>
 
-        <!-- Regente Bio Brief -->
-        <div class="rounded-xl p-2 border text-[8px]" :class="isLightMode ? 'bg-gray-50 border-gray-200 text-gray-700' : 'bg-white/5 border-white/10 text-gray-300'">
-          <div class="flex items-center gap-2">
-            <span class="text-lg">🎼</span>
+        <!-- Regente Bio Brief (Enlarged) -->
+        <div class="rounded-2xl p-2.5 border shadow-sm" :class="isLightMode ? 'bg-gray-50 border-gray-200 text-gray-800' : 'bg-white/5 border-white/10 text-gray-300'">
+          <div class="flex items-center gap-2.5">
+            <div class="w-10 h-10 rounded-xl bg-amber-500/20 text-amber-400 flex items-center justify-center text-xl border border-amber-500/30 shrink-0">
+              🎼
+            </div>
             <div>
-              <strong class="block text-[9px]" :class="isLightMode ? 'text-gray-900' : 'text-white'">Regência: Prof. Clodoaldo Carvalho de Jesus</strong>
-              <span class="text-gray-400 text-[7.5px]">Pedagogo (UNIFADRA), Tecnólogo em Música (UNOESTE) e ex-Guri.</span>
+              <strong class="block text-[10.5px] font-black" :class="isLightMode ? 'text-gray-950' : 'text-white'">Regência: Prof. Clodoaldo Carvalho de Jesus</strong>
+              <span class="text-gray-300 text-[9px] block leading-snug mt-0.5">Pedagogo (UNIFADRA), Tecnólogo em Música (UNOESTE) e ex-Mocidade de Carapicuíba. Professor de percussão e regente de fanfarras na Alta Paulista.</span>
             </div>
           </div>
+        </div>
+
+        <!-- Cultural Commitments Mini Bar -->
+        <div class="rounded-xl px-3 py-1 border text-center flex items-center justify-around text-[8.5px] font-extrabold shadow-sm" :class="isLightMode ? 'bg-amber-100/70 border-amber-300 text-amber-950' : 'bg-white/5 border-amber-500/20 text-amber-300'">
+          <span>🥁 Democratização Cultural</span>
+          <span>•</span>
+          <span>🌍 Memória Afro-Brasileira</span>
+          <span>•</span>
+          <span>📍 Arte no Espaço Público</span>
         </div>
 
       </div>
 
-      <!-- Bottom: QR Code 2 (Instagram) & Contacts -->
+      <!-- Bottom: QR Code 2 (Instagram) & Contacts (Enlarged) -->
       <footer class="pt-2 border-t" :class="isLightMode ? 'border-gray-200' : 'border-white/10'">
         <div class="flex items-center justify-between gap-3">
           
-          <div class="flex items-center gap-2.5">
-            <div class="w-[26mm] h-[26mm] bg-white p-1 rounded-lg border border-gray-300 shadow-sm flex items-center justify-center shrink-0">
+          <div class="flex items-center gap-3">
+            <div class="w-[28mm] h-[28mm] bg-white p-1 rounded-xl border border-gray-300 shadow-md flex items-center justify-center shrink-0">
               <div x-html="qrCodeInstagramSvg" class="w-full h-full flex items-center justify-center [&>svg]:w-full [&>svg]:h-full"></div>
             </div>
             <div>
-              <span class="text-[8px] font-bold uppercase text-pink-500 tracking-wider block">📸 Instagram Oficial</span>
-              <strong class="text-[10px] block font-black leading-tight" :class="isLightMode ? 'text-gray-900' : 'text-white'">@bloco.batucaki</strong>
-              <p class="text-[8px] text-gray-400 mt-0.5 leading-tight">Veja vídeos dos ensaios, fotos e novidades da nossa bateria!</p>
+              <span class="text-[9.5px] font-black uppercase text-pink-500 tracking-wider block">📸 Instagram Oficial</span>
+              <strong class="text-xs sm:text-sm block font-black leading-tight" :class="isLightMode ? 'text-gray-900' : 'text-white'">@bloco.batucaki</strong>
+              <p class="text-[9px] text-gray-400 mt-0.5 leading-tight">Veja fotos, vídeos dos ensaios e novidades!</p>
             </div>
           </div>
 
           <!-- Contact Mini Box -->
-          <div class="text-right text-[8px] space-y-1 shrink-0">
+          <div class="text-right space-y-1 shrink-0">
             <div>
-              <span class="text-gray-400 block text-[7px]">WhatsApp Oficial:</span>
-              <strong class="text-[9px] font-bold text-green-500">(18) 99799-8362</strong>
+              <span class="text-gray-400 block text-[8.5px] font-semibold">WhatsApp Oficial:</span>
+              <strong class="text-xs font-black text-emerald-400 leading-none">(18) 99799-8362</strong>
             </div>
             <div>
-              <span class="text-gray-400 block text-[7px]">E-mail:</span>
-              <span class="text-[7.5px] text-gray-400">leopso1990@gmail.com</span>
+              <span class="text-gray-400 block text-[8.5px] font-semibold">E-mail:</span>
+              <span class="text-[9px] text-gray-300 font-bold">leopso1990@gmail.com</span>
             </div>
           </div>
 
         </div>
 
-        <div class="text-center mt-2 text-[7px] text-gray-500">
+        <div class="text-center mt-1.5 text-[8px] text-gray-500 font-medium">
           Coordenação: Leonardo Pereira dos Santos de Oliveira · Tupi Paulista — SP
         </div>
       </footer>
